@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivePoint - cadastro(D.A)</title>
+    <link rel="stylesheet" href="../Styles.css">
+    <script src="../Script.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="content" style="font-family: Roboto;">
+        <img src="../Img/DrivePoint.jpg" alt="ImagemDrivePoint">
+        <div class="contentNav">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="#">Menu Principal</a></li>
+                        <li><a href="#">Veicúlos</a></li>
+                        <li><a>Comparar Veiculos</a></li>
+                        <li><a href="#">Contato</a>
+                            <ul class="submenu">
+                                <li><a href="#">Email</a></li>
+                                <li><a href="#">Portal de atendimento</a></li>
+                            </ul>
+                        </li>
+                        |
+                        <li><a href="#">Entrar</a></li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <form class="singin">
+        <h2>Cadastro</h2>
+
+        <label class="" for="txtUsuario">Nome</label>
+        <input type="text" id="txtUsuario" name="txtUsuario" required>
+
+        <label for="txtemail">Email</label>
+        <input type="text" id="txtemail" name="txtemail" required>
+
+        <label for="date">Data de Nascimento</label>
+        <input type="date" id="date" name="date" required>
+
+        <label for="telefone">Tefelone</label>
+        <input type="text" id="telefone" name="telefone" required>
+
+        <label for="endereco">Endereço</label>
+        <input type="text" id="endereco" name="endereco" required>
+
+        <label for="senha">Senha</label>
+        <input type="password" id="senha" name="senha" required>
+
+        <label for="confirmsenha">Confirmar Senha</label>
+        <input type="password" id="confirmsenha" name="confirmsenha" required>
+      
+        <button class="submit-singin" type="button" onclick="validarcadastro()">cadastra-se</button>
+        <p id="popmessage"></p>
+    </form>
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2025 DrivePoint. Todos os direitos reservados.</p>
+            <nav class="rodape">
+                <ul>
+                    <li><a href="#">Política de Privacidade</a></li>
+                    <li><a href="#">Termos de Serviço</a></li>
+                    <li><a href="#">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+
+</body>
+
+</html>
