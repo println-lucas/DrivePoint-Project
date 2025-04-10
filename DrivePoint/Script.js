@@ -56,6 +56,10 @@ function validarcadastro() {
 }
 
 
+function adddFavorito(){
+const button = document.querySelector('[data-qa="addFavorite"]');
+}
+
 
 function validarSenha(senha) {
     let messagePop = document.getElementById("popmessage");

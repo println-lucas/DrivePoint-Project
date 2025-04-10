@@ -11,61 +11,6 @@ body {
     /* overflow: hidden; */
 }
 
-/* form site / cadastro */
-form {
-    align-content: center;
-    width: 350px;
-    margin: 50px auto;
-    padding:  20px;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    background-color: white;
-    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.15);
-    font-family: 'Roboto', sans-serif;
-    margin-top: 13vh;
-}
-
-form h2 {
-padding: 5px 0px 5px;
-text-align: center;    
-}
-
-input, select {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
-
-.singin button{
-    background-color: purple;
-    color: #ffffff;
-    padding: 10px;
-    width: 100%;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-    margin-bottom: 5px;
-    font-family: 'Roboto', sans-serif;
-    font-size: 14px;
-
-}
-
-.singin button:hover{
-    background-color: #e6e6e6;
-    color: #444444;
-    transition: all 0.3s;
-    border: 1px solid #444444;
-    transform: scale(1.015);
-    font-family: 'Roboto', sans-serif;
-}
-
-input[type=date]{
-padding: 0.6em;
-text-align: end;
-}
-
 /* menu principal */
 
 .content {
@@ -185,24 +130,61 @@ nav ul .submenu li a {
     font-family: 'Roboto', sans-serif;
 }
 
-/* home */
-
-.body-home{
-    display: flex; 
-    justify-content: center;  
-    align-items: center;
+/* form site / cadastro / login */
+form {
+    align-content: center;
+    width: 350px;
+    margin: 50px auto;
+    padding:  20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
     background-color: white;
+    box-shadow: 2px 2px 10px rgb(0, 0, 0, 0.15);
+    font-family: 'Roboto', sans-serif;
+    margin-top: 13vh;
 }
 
-
-.container-home-realese{
-    margin-top: 9dvh;
-    height: 660px;
-    width: 1296px;
-    display: flex;
-    background-color: #5937E0;
-    border-radius: 40px;
+form h2 {
+padding: 5px 0px 5px;
+text-align: center;    
 }
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.singin button{
+    background-color: purple;
+    color: #ffffff;
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+
+}
+
+.singin button:hover{
+    background-color: #e6e6e6;
+    color: #444444;
+    transition: all 0.3s;
+    border: 1px solid #444444;
+    transform: scale(1.015);
+    font-family: 'Roboto', sans-serif;
+}
+
+input[type=date]{
+padding: 0.6em;
+text-align: end;
+}
+
 
 /* Imagem */
 
