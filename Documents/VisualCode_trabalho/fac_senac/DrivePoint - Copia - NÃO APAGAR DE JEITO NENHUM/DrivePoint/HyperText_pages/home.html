@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivePoint - home (D.A)</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../StyleHome.css">
+    <script src="../Script.js"></script>
+</head>
+
+<body class="body-home">
+    <div class="content-menu-home" style="font-family: Roboto;">
+        <img class="driveIcon" src="../Img/DrivePoint.jpg" alt="ImagemDrivePoint-home">
+        <div class="contentNav-home">
+            <nav>
+                <div>
+                    <ul>
+                        <li><a href="#">Menu Principal</a></li>
+                        <li><a href="#">Veicúlos</a></li>
+                        <li><a href="#">Comparar Veiculos</a></li>
+                        <li><a href="#">Contato</a>
+                            <ul class="submenu-home">
+                                <li><a href="#">Email</a></li>
+                                <li><a href="#">Portal de atendimento</a></li>
+                            </ul>
+                        </li>
+                        <li style="border-left: solid 1px #ccc;"><a href="#">Entrar</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <div class="container-home-realese">
+        <div class="leftsubcont-home-realese">
+            <div class="realese-h1">
+                <h1>Pense menos, acelere mais!</h1>
+            </div>
+            <div class="paragraf-release">
+                <p>Acompanhe as novidades do mundo automotivo, compare novos modelos 0 km,
+                    <br> veja as principais novidades das montadoras e encontre os melhores preços,
+                    <br>tudo em um lugar só.
+                </p>
+            </div>
+            <a href=""><button class="novidades" type="button" id="novidades" name="novidade">Confira!</button></a>
+        </div>
+        <div class="rigthsubcont-home-realese">
+            <div>
+                <form class="form-book-car">
+                    <h2>Encontre seu carro ideal</h2>
+                    <select id="selType" name="selType" required>
+                        <option value="selType" disabled selected>Carroceria</option>
+                        <option value="selType">Sedan</option>
+                        <option value="selType">Hatch</option>
+                        <option value="selType">SUV</option>
+                        <option value="selType">Coupé</option>
+                        <option value="selType">Pick-up/Picápe</option>
+                        <option value="selType">Moto</option>
+                    </select>
+                    <select id="selMarca" name="selMarca" required>
+                        <option value="AlfaRomeoSelect" disabled selected>Marca</option>
+                        <option value="AlfaRomeoSelect">Alfa Romeo</option>
+                        <option value="AudiSelect">Audi</option>
+                        <option value="BMWSelect">BMW</option>
+                        <option value="ChryslerSelect">Chrysler</option>
+                        <option value="CitroenSelect">Citroën</option>
+                        <option value="DucatiSelect">Ducati</option>
+                        <option value="FerrariSelect">Ferrari</option>
+                        <option value="FiatSelect">Fiat</option>
+                        <option value="FordSelect">Ford</option>
+                        <option value="HarleyDavidsonSelect">Harley-Davidson</option>
+                        <option value="HondaSelect">Honda</option>
+                        <option value="HyundaiSelect">Hyundai</option>
+                        <option value="JaguarSelect">Jaguar</option>
+                        <option value="JeepSelect">Jeep</option>
+                        <option value="KawasakiSelect">Kawasaki</option>
+                        <option value="KiaSelect">Kia</option>
+                        <option value="LandRoverSelect">Land Rover</option>
+                        <option value="LamborghiniSelect">Lamborghini</option>
+                        <option value="LexusSelect">Lexus</option>
+                        <option value="MaseratiSelect">Maserati</option>
+                        <option value="MazdaSelect">Mazda</option>
+                        <option value="MercedesBenzSelect">Mercedes-Benz</option>
+                        <option value="MiniSelect">Mini</option>
+                        <option value="MitsubishiSelect">Mitsubishi</option>
+                        <option value="NissanSelect">Nissan</option>
+                        <option value="PeugeotSelect">Peugeot</option>
+                        <option value="PorscheSelect">Porsche</option>
+                        <option value="RamSelect">Ram</option>
+                        <option value="RenaultSelect">Renault</option>
+                        <option value="SubaruSelect">Subaru</option>
+                        <option value="SuzukiSelect">Suzuki</option>
+                        <option value="TeslaSelect">Tesla</option>
+                        <option value="ToyotaSelect">Toyota</option>
+                        <option value="VolkswagenSelect">Volkswagen</option>
+                        <option value="VolvoSelect">Volvo</option>
+                        <option value="YamahaSelect">Yamaha</option>
+                    </select>
+                    <input type="text" id="txtModelo" name="txtModelo" placeholder="Modelo">
+                    <div class="ano">
+                        <input type="text" id="dataCar" name="dataCar" maxlength="4" placeholder="Ano mínimo">
+                        <input type="text" id="dataCar" name="dataCar" maxlength="4" placeholder="Ano máximo">
+                    </div>
+                    <div class="kmtragem">
+                        <input type="text" id="kmtragem" maxlength="7" name="kmtragem" placeholder="Km mínimo">
+                        <input type="text" id="kmtragem" maxlength="7" name="kmtragem" placeholder="Km máxima">
+                    </div>
+                    <button class="carroIdeal" type="button" onclick="carroIdeal()">Pesquisar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class="second-container">
+        <div class="second-container-comparar"><a href="#">
+                <img class="comparar" src="../Img/comparar.svg" alt="compararDrivePoint">
+                <h4>Compare Veiculos de sua escolha</h4>
+            </a>
+        </div>
+        <div class="second-container-favorito"><a href="#">
+                <img class="coracao" src="../Img/coracaoDrivePoint.svg" alt="coracaoDrivePoint">
+                <h4>Verifique sua lista de favoritos</h4>
+            </a>
+        </div>
+        <div class="second-container-veiculos"><a href="#">
+                <img class="carroComprar" src="../Img/carroVetor.svg" alt="comprarDrivePoint">
+                <h4>Encontre os melhores preços do mundo automotivo</h4>
+            </a>
+        </div>
+    </div>
+
+    <div class="third-container">
+        <div class="subthird-container">
+            <div class="newsletter">
+                <div class="img-newsletter" id="img-newsletter">
+                    <div class="subnewsletter">
+                        <a href="#">
+                            <h1 id="Dynamic-newsLetter">Volkswagen apresenta o Tera, SUV de entrada para brigar no setor
+                                mais concorrido do mercado</h1>
+                        </a>
+                    </div>
+                </div>
+
+<!-- dinamico -->
+
+                <div class="containernewsletter">
+                    <div class="newsletter-topics">
+                        <div class="topics-newsletter-group">
+                            <button onclick="changeEventNews()" class="span-topic" >
+                                <p>1</p>
+                            </button>
+                            <a href="#"><h2>Revelação Volksawagen</h2></a>
+                        </div>
+                        <div class="topics-newsletter-group-p">
+                            <p>Volkswagen apresenta o Tera, SUV de entrada para brigar no setor mais concorrido do
+                                mercado</p>
+                        </div>
+
+                        <div class="topics-newsletter-group">
+                            <span class="span-topic">
+                                <p>2</p>
+                            </span>
+                            <a href="#"><h2>Revelação Volksawagen</h2></a>
+                        </div>
+                        <div class="topics-newsletter-group-p">
+                            <p>Volkswagen apresenta o Tera, SUV de entrada para brigar no setor mais concorrido do
+                                mercado</p>
+                        </div>
+
+                        <div class="topics-newsletter-group">
+                            <span class="span-topic">
+                                <p>3</p>
+                            </span>
+                            <a href="#"><h2>Revelação Volksawagen</h2></a>
+                        </div>
+                        <div class="topics-newsletter-group-p">
+                            <p>Volkswagen apresenta o Tera, SUV de entrada para brigar no setor mais concorrido do
+                                mercado</p>
+                        </div>
+
+                        <div class="topics-newsletter-group">
+                            <span class="span-topic">
+                                <p>4</p>
+                            </span>
+                            <a href="#"><h2>Revelação Volksawagen</h2></a>
+                        </div>
+                        <div class="topics-newsletter-group-p">
+                            <p>Volkswagen apresenta o Tera, SUV de entrada para brigar no setor mais concorrido do
+                                mercado</p>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </div>
+    </div>
+
+    <div class="fourth-container">
+        <div class="subfourth-container">
+            <h1>Escolha o carro que seja a sua cara:</h1>
+            <a href="#">Veja todos ↪</a>
+        </div>
+        <div class="container-car-lote">
+            <div class="container-car-lote-infoCar">
+
+                <div class="CarInfo">
+                    <h3 class="title">Audi Q3</h3>
+                    <div class="info-Car">
+                        <p class="desc-info-car">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.6667 8.33335C16.6667 12.4942 12.0508 16.8275 10.5008 18.1659C10.3564 18.2744 10.1807 18.3331 10 18.3331C9.81934 18.3331 9.64357 18.2744 9.49918 18.1659C7.94918 16.8275 3.33334 12.4942 3.33334 8.33335C3.33334 6.56524 4.03572 4.86955 5.28596 3.61931C6.53621 2.36907 8.2319 1.66669 10 1.66669C11.7681 1.66669 13.4638 2.36907 14.7141 3.61931C15.9643 4.86955 16.6667 6.56524 16.6667 8.33335Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10 10.8333C11.3807 10.8333 12.5 9.71402 12.5 8.33331C12.5 6.9526 11.3807 5.83331 10 5.83331C8.61929 5.83331 7.5 6.9526 7.5 8.33331C7.5 9.71402 8.61929 10.8333 10 10.8333Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>Em São Paulo
+                        </p>
+                        <a href=""><img class="coracaoCatalog" src="../Img/coracaoDrivePoint.svg"
+                                alt="coracaoDrivePoint"></a>
+                    </div>
+                    <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250402/audi-q5-2-0-45-tfsi-gasolina-sline-quattro-s-tronic-wmimagem22004714121.webp?s=fill&w=1920&h=1440&q=75"
+                        alt="Q5catalog">
+                    <div class="info-car-bottom">
+                        <div class="info-title">Audi Q5</div>
+                        <p class="info-specs-car">2.0 TFSI Sportback Performance Quattro S-Tronic</p>
+                        <div class="number-info-car">
+                            <p class="info-date-car"> <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.5625 11.25C6.9106 11.25 7.24444 11.1183 7.49058 10.8839C7.73672 10.6495 7.875 10.3315 7.875 10C7.875 9.66848 7.73672 9.35054 7.49058 9.11612C7.24444 8.8817 6.9106 8.75 6.5625 8.75C6.2144 8.75 5.88056 8.8817 5.63442 9.11612C5.38828 9.35054 5.25 9.66848 5.25 10C5.25 10.3315 5.38828 10.6495 5.63442 10.8839C5.88056 11.1183 6.2144 11.25 6.5625 11.25ZM7.875 13.75C7.875 14.0815 7.73672 14.3995 7.49058 14.6339C7.24444 14.8683 6.9106 15 6.5625 15C6.2144 15 5.88056 14.8683 5.63442 14.6339C5.38828 14.3995 5.25 14.0815 5.25 13.75C5.25 13.4185 5.38828 13.1005 5.63442 12.8661C5.88056 12.6317 6.2144 12.5 6.5625 12.5C6.9106 12.5 7.24444 12.6317 7.49058 12.8661C7.73672 13.1005 7.875 13.4185 7.875 13.75ZM10.5 11.25C10.8481 11.25 11.1819 11.1183 11.4281 10.8839C11.6742 10.6495 11.8125 10.3315 11.8125 10C11.8125 9.66848 11.6742 9.35054 11.4281 9.11612C11.1819 8.8817 10.8481 8.75 10.5 8.75C10.1519 8.75 9.81806 8.8817 9.57192 9.11612C9.32578 9.35054 9.1875 9.66848 9.1875 10C9.1875 10.3315 9.32578 10.6495 9.57192 10.8839C9.81806 11.1183 10.1519 11.25 10.5 11.25ZM11.8125 13.75C11.8125 14.0815 11.6742 14.3995 11.4281 14.6339C11.1819 14.8683 10.8481 15 10.5 15C10.1519 15 9.81806 14.8683 9.57192 14.6339C9.32578 14.3995 9.1875 14.0815 9.1875 13.75C9.1875 13.4185 9.32578 13.1005 9.57192 12.8661C9.81806 12.6317 10.1519 12.5 10.5 12.5C10.8481 12.5 11.1819 12.6317 11.4281 12.8661C11.6742 13.1005 11.8125 13.4185 11.8125 13.75ZM14.4375 11.25C14.7856 11.25 15.1194 11.1183 15.3656 10.8839C15.6117 10.6495 15.75 10.3315 15.75 10C15.75 9.66848 15.6117 9.35054 15.3656 9.11612C15.1194 8.8817 14.7856 8.75 14.4375 8.75C14.0894 8.75 13.7556 8.8817 13.5094 9.11612C13.2633 9.35054 13.125 9.66848 13.125 10C13.125 10.3315 13.2633 10.6495 13.5094 10.8839C13.7556 11.1183 14.0894 11.25 14.4375 11.25Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.6875 4.375C19.6875 3.5462 19.3418 2.75134 18.7264 2.16529C18.1111 1.57924 17.2765 1.25 16.4062 1.25L4.59375 1.25C3.72351 1.25 2.88891 1.57924 2.27356 2.16529C1.6582 2.75134 1.3125 3.5462 1.3125 4.375L1.3125 15.625C1.3125 16.4538 1.6582 17.2487 2.27356 17.8347C2.88891 18.4208 3.72351 18.75 4.59375 18.75L16.4062 18.75C17.2765 18.75 18.1111 18.4208 18.7264 17.8347C19.3418 17.2487 19.6875 16.4538 19.6875 15.625L19.6875 4.375ZM2.625 6.25L18.375 6.25L18.375 15.625C18.375 16.6625 17.4956 17.5 16.4062 17.5L4.59375 17.5C4.07161 17.5 3.57085 17.3025 3.20163 16.9508C2.83242 16.5992 2.625 16.1223 2.625 15.625L2.625 6.25ZM4.59375 2.5L16.4062 2.5C17.4956 2.5 18.375 3.3375 18.375 4.375L18.375 5L2.625 5L2.625 4.375C2.625 3.3375 3.50438 2.5 4.59375 2.5Z"
+                                        fill="black" />
+                                </svg> 2021/2022 </p>
+                            <p class="info-KM-car"> <svg width="24" height="19" viewBox="0 0 24 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 11.631C24 14.1839 23.1621 16.6072 21.577 18.6394C21.2642 19.0405 20.6761 19.1182 20.2637 18.8158C19.8508 18.5129 19.7693 17.9428 20.0815 17.5424C21.4184 15.8288 22.125 13.7846 22.125 11.631C22.125 6.20454 17.593 1.81818 12 1.81818C6.4032 1.81818 1.875 6.20791 1.875 11.631C1.875 13.7846 2.5816 15.8288 3.91827 17.5424C4.23065 17.9428 4.14917 18.5129 3.73627 18.8158C3.32318 19.1188 2.73541 19.0397 2.42285 18.6394C0.837891 16.6072 -1.06891e-09 14.1839 -8.76524e-10 11.631C-3.91817e-10 5.19921 5.37085 4.04752e-10 12 9.04331e-10C18.6328 1.40419e-09 24 5.20276 24 11.631ZM17.9401 6.15606C18.3062 6.511 18.3062 7.08664 17.9401 7.44157L14.8843 10.4048C15.1359 10.8546 15.2791 11.3695 15.2791 11.916C15.2791 13.6694 13.808 15.0957 12 15.0957C10.1918 15.0957 8.72095 13.6694 8.72095 11.916C8.72095 10.1628 10.1918 8.73632 12 8.73632C12.5638 8.73632 13.0946 8.87517 13.5584 9.11913L16.6143 6.15589C16.9805 5.80095 17.5739 5.80095 17.9401 6.15606ZM13.4041 11.9162C13.4041 11.1655 12.7742 10.5547 12 10.5547C11.2258 10.5547 10.5959 11.1655 10.5959 11.9162C10.5959 12.6669 11.2258 13.2777 12 13.2777C12.7742 13.2777 13.4041 12.6669 13.4041 11.9162Z"
+                                        fill="black" />
+                                </svg> 12.865 Km </p>
+                        </div>
+                        <div class="prices">
+                            <div class="container-price">
+                                <div class="desc-price">Preço a partir de</div>
+                                <h2 class="price">R$ 485.118,00</h2>
+                                <div class="rate-info">Taxas incluídas</div>
+                            </div>
+                            <a href="#"><button class="info-type-button">Conferir</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CarInfo">
+                    <h3 class="title">Audi Q3</h3>
+                    <div class="info-Car">
+                        <p class="desc-info-car">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.6667 8.33335C16.6667 12.4942 12.0508 16.8275 10.5008 18.1659C10.3564 18.2744 10.1807 18.3331 10 18.3331C9.81934 18.3331 9.64357 18.2744 9.49918 18.1659C7.94918 16.8275 3.33334 12.4942 3.33334 8.33335C3.33334 6.56524 4.03572 4.86955 5.28596 3.61931C6.53621 2.36907 8.2319 1.66669 10 1.66669C11.7681 1.66669 13.4638 2.36907 14.7141 3.61931C15.9643 4.86955 16.6667 6.56524 16.6667 8.33335Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10 10.8333C11.3807 10.8333 12.5 9.71402 12.5 8.33331C12.5 6.9526 11.3807 5.83331 10 5.83331C8.61929 5.83331 7.5 6.9526 7.5 8.33331C7.5 9.71402 8.61929 10.8333 10 10.8333Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>Em São Paulo
+                        </p>
+                        <a href=""><img class="coracaoCatalog" src="../Img/coracaoDrivePoint.svg"
+                                alt="coracaoDrivePoint"></a>
+                    </div>
+                    <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250402/audi-q5-2-0-45-tfsi-gasolina-sline-quattro-s-tronic-wmimagem22004714121.webp?s=fill&w=1920&h=1440&q=75"
+                        alt="Q5catalog">
+                    <div class="info-car-bottom">
+                        <div class="info-title">Audi Q5</div>
+                        <p class="info-specs-car">2.0 TFSI Sportback Performance Quattro S-Tronic</p>
+                        <div class="number-info-car">
+                            <p class="info-date-car"> <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.5625 11.25C6.9106 11.25 7.24444 11.1183 7.49058 10.8839C7.73672 10.6495 7.875 10.3315 7.875 10C7.875 9.66848 7.73672 9.35054 7.49058 9.11612C7.24444 8.8817 6.9106 8.75 6.5625 8.75C6.2144 8.75 5.88056 8.8817 5.63442 9.11612C5.38828 9.35054 5.25 9.66848 5.25 10C5.25 10.3315 5.38828 10.6495 5.63442 10.8839C5.88056 11.1183 6.2144 11.25 6.5625 11.25ZM7.875 13.75C7.875 14.0815 7.73672 14.3995 7.49058 14.6339C7.24444 14.8683 6.9106 15 6.5625 15C6.2144 15 5.88056 14.8683 5.63442 14.6339C5.38828 14.3995 5.25 14.0815 5.25 13.75C5.25 13.4185 5.38828 13.1005 5.63442 12.8661C5.88056 12.6317 6.2144 12.5 6.5625 12.5C6.9106 12.5 7.24444 12.6317 7.49058 12.8661C7.73672 13.1005 7.875 13.4185 7.875 13.75ZM10.5 11.25C10.8481 11.25 11.1819 11.1183 11.4281 10.8839C11.6742 10.6495 11.8125 10.3315 11.8125 10C11.8125 9.66848 11.6742 9.35054 11.4281 9.11612C11.1819 8.8817 10.8481 8.75 10.5 8.75C10.1519 8.75 9.81806 8.8817 9.57192 9.11612C9.32578 9.35054 9.1875 9.66848 9.1875 10C9.1875 10.3315 9.32578 10.6495 9.57192 10.8839C9.81806 11.1183 10.1519 11.25 10.5 11.25ZM11.8125 13.75C11.8125 14.0815 11.6742 14.3995 11.4281 14.6339C11.1819 14.8683 10.8481 15 10.5 15C10.1519 15 9.81806 14.8683 9.57192 14.6339C9.32578 14.3995 9.1875 14.0815 9.1875 13.75C9.1875 13.4185 9.32578 13.1005 9.57192 12.8661C9.81806 12.6317 10.1519 12.5 10.5 12.5C10.8481 12.5 11.1819 12.6317 11.4281 12.8661C11.6742 13.1005 11.8125 13.4185 11.8125 13.75ZM14.4375 11.25C14.7856 11.25 15.1194 11.1183 15.3656 10.8839C15.6117 10.6495 15.75 10.3315 15.75 10C15.75 9.66848 15.6117 9.35054 15.3656 9.11612C15.1194 8.8817 14.7856 8.75 14.4375 8.75C14.0894 8.75 13.7556 8.8817 13.5094 9.11612C13.2633 9.35054 13.125 9.66848 13.125 10C13.125 10.3315 13.2633 10.6495 13.5094 10.8839C13.7556 11.1183 14.0894 11.25 14.4375 11.25Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.6875 4.375C19.6875 3.5462 19.3418 2.75134 18.7264 2.16529C18.1111 1.57924 17.2765 1.25 16.4062 1.25L4.59375 1.25C3.72351 1.25 2.88891 1.57924 2.27356 2.16529C1.6582 2.75134 1.3125 3.5462 1.3125 4.375L1.3125 15.625C1.3125 16.4538 1.6582 17.2487 2.27356 17.8347C2.88891 18.4208 3.72351 18.75 4.59375 18.75L16.4062 18.75C17.2765 18.75 18.1111 18.4208 18.7264 17.8347C19.3418 17.2487 19.6875 16.4538 19.6875 15.625L19.6875 4.375ZM2.625 6.25L18.375 6.25L18.375 15.625C18.375 16.6625 17.4956 17.5 16.4062 17.5L4.59375 17.5C4.07161 17.5 3.57085 17.3025 3.20163 16.9508C2.83242 16.5992 2.625 16.1223 2.625 15.625L2.625 6.25ZM4.59375 2.5L16.4062 2.5C17.4956 2.5 18.375 3.3375 18.375 4.375L18.375 5L2.625 5L2.625 4.375C2.625 3.3375 3.50438 2.5 4.59375 2.5Z"
+                                        fill="black" />
+                                </svg> 2021/2022 </p>
+                            <p class="info-KM-car"> <svg width="24" height="19" viewBox="0 0 24 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 11.631C24 14.1839 23.1621 16.6072 21.577 18.6394C21.2642 19.0405 20.6761 19.1182 20.2637 18.8158C19.8508 18.5129 19.7693 17.9428 20.0815 17.5424C21.4184 15.8288 22.125 13.7846 22.125 11.631C22.125 6.20454 17.593 1.81818 12 1.81818C6.4032 1.81818 1.875 6.20791 1.875 11.631C1.875 13.7846 2.5816 15.8288 3.91827 17.5424C4.23065 17.9428 4.14917 18.5129 3.73627 18.8158C3.32318 19.1188 2.73541 19.0397 2.42285 18.6394C0.837891 16.6072 -1.06891e-09 14.1839 -8.76524e-10 11.631C-3.91817e-10 5.19921 5.37085 4.04752e-10 12 9.04331e-10C18.6328 1.40419e-09 24 5.20276 24 11.631ZM17.9401 6.15606C18.3062 6.511 18.3062 7.08664 17.9401 7.44157L14.8843 10.4048C15.1359 10.8546 15.2791 11.3695 15.2791 11.916C15.2791 13.6694 13.808 15.0957 12 15.0957C10.1918 15.0957 8.72095 13.6694 8.72095 11.916C8.72095 10.1628 10.1918 8.73632 12 8.73632C12.5638 8.73632 13.0946 8.87517 13.5584 9.11913L16.6143 6.15589C16.9805 5.80095 17.5739 5.80095 17.9401 6.15606ZM13.4041 11.9162C13.4041 11.1655 12.7742 10.5547 12 10.5547C11.2258 10.5547 10.5959 11.1655 10.5959 11.9162C10.5959 12.6669 11.2258 13.2777 12 13.2777C12.7742 13.2777 13.4041 12.6669 13.4041 11.9162Z"
+                                        fill="black" />
+                                </svg> 12.865 Km </p>
+                        </div>
+                        <div class="prices">
+                            <div class="container-price">
+                                <div class="desc-price">Preço a partir de</div>
+                                <h2 class="price">R$ 485.118,00</h2>
+                                <div class="rate-info">Taxas incluídas</div>
+                            </div>
+                            <a href="#"><button class="info-type-button">Conferir</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CarInfo">
+                    <h3 class="title">Audi Q3</h3>
+                    <div class="info-Car">
+                        <p class="desc-info-car">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.6667 8.33335C16.6667 12.4942 12.0508 16.8275 10.5008 18.1659C10.3564 18.2744 10.1807 18.3331 10 18.3331C9.81934 18.3331 9.64357 18.2744 9.49918 18.1659C7.94918 16.8275 3.33334 12.4942 3.33334 8.33335C3.33334 6.56524 4.03572 4.86955 5.28596 3.61931C6.53621 2.36907 8.2319 1.66669 10 1.66669C11.7681 1.66669 13.4638 2.36907 14.7141 3.61931C15.9643 4.86955 16.6667 6.56524 16.6667 8.33335Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10 10.8333C11.3807 10.8333 12.5 9.71402 12.5 8.33331C12.5 6.9526 11.3807 5.83331 10 5.83331C8.61929 5.83331 7.5 6.9526 7.5 8.33331C7.5 9.71402 8.61929 10.8333 10 10.8333Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>Em São Paulo
+                        </p>
+                        <a href=""><img class="coracaoCatalog" src="../Img/coracaoDrivePoint.svg"
+                                alt="coracaoDrivePoint"></a>
+                    </div>
+                    <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250402/audi-q5-2-0-45-tfsi-gasolina-sline-quattro-s-tronic-wmimagem22004714121.webp?s=fill&w=1920&h=1440&q=75"
+                        alt="Q5catalog">
+                    <div class="info-car-bottom">
+                        <div class="info-title">Audi Q5</div>
+                        <p class="info-specs-car">2.0 TFSI Sportback Performance Quattro S-Tronic</p>
+                        <div class="number-info-car">
+                            <p class="info-date-car"> <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.5625 11.25C6.9106 11.25 7.24444 11.1183 7.49058 10.8839C7.73672 10.6495 7.875 10.3315 7.875 10C7.875 9.66848 7.73672 9.35054 7.49058 9.11612C7.24444 8.8817 6.9106 8.75 6.5625 8.75C6.2144 8.75 5.88056 8.8817 5.63442 9.11612C5.38828 9.35054 5.25 9.66848 5.25 10C5.25 10.3315 5.38828 10.6495 5.63442 10.8839C5.88056 11.1183 6.2144 11.25 6.5625 11.25ZM7.875 13.75C7.875 14.0815 7.73672 14.3995 7.49058 14.6339C7.24444 14.8683 6.9106 15 6.5625 15C6.2144 15 5.88056 14.8683 5.63442 14.6339C5.38828 14.3995 5.25 14.0815 5.25 13.75C5.25 13.4185 5.38828 13.1005 5.63442 12.8661C5.88056 12.6317 6.2144 12.5 6.5625 12.5C6.9106 12.5 7.24444 12.6317 7.49058 12.8661C7.73672 13.1005 7.875 13.4185 7.875 13.75ZM10.5 11.25C10.8481 11.25 11.1819 11.1183 11.4281 10.8839C11.6742 10.6495 11.8125 10.3315 11.8125 10C11.8125 9.66848 11.6742 9.35054 11.4281 9.11612C11.1819 8.8817 10.8481 8.75 10.5 8.75C10.1519 8.75 9.81806 8.8817 9.57192 9.11612C9.32578 9.35054 9.1875 9.66848 9.1875 10C9.1875 10.3315 9.32578 10.6495 9.57192 10.8839C9.81806 11.1183 10.1519 11.25 10.5 11.25ZM11.8125 13.75C11.8125 14.0815 11.6742 14.3995 11.4281 14.6339C11.1819 14.8683 10.8481 15 10.5 15C10.1519 15 9.81806 14.8683 9.57192 14.6339C9.32578 14.3995 9.1875 14.0815 9.1875 13.75C9.1875 13.4185 9.32578 13.1005 9.57192 12.8661C9.81806 12.6317 10.1519 12.5 10.5 12.5C10.8481 12.5 11.1819 12.6317 11.4281 12.8661C11.6742 13.1005 11.8125 13.4185 11.8125 13.75ZM14.4375 11.25C14.7856 11.25 15.1194 11.1183 15.3656 10.8839C15.6117 10.6495 15.75 10.3315 15.75 10C15.75 9.66848 15.6117 9.35054 15.3656 9.11612C15.1194 8.8817 14.7856 8.75 14.4375 8.75C14.0894 8.75 13.7556 8.8817 13.5094 9.11612C13.2633 9.35054 13.125 9.66848 13.125 10C13.125 10.3315 13.2633 10.6495 13.5094 10.8839C13.7556 11.1183 14.0894 11.25 14.4375 11.25Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.6875 4.375C19.6875 3.5462 19.3418 2.75134 18.7264 2.16529C18.1111 1.57924 17.2765 1.25 16.4062 1.25L4.59375 1.25C3.72351 1.25 2.88891 1.57924 2.27356 2.16529C1.6582 2.75134 1.3125 3.5462 1.3125 4.375L1.3125 15.625C1.3125 16.4538 1.6582 17.2487 2.27356 17.8347C2.88891 18.4208 3.72351 18.75 4.59375 18.75L16.4062 18.75C17.2765 18.75 18.1111 18.4208 18.7264 17.8347C19.3418 17.2487 19.6875 16.4538 19.6875 15.625L19.6875 4.375ZM2.625 6.25L18.375 6.25L18.375 15.625C18.375 16.6625 17.4956 17.5 16.4062 17.5L4.59375 17.5C4.07161 17.5 3.57085 17.3025 3.20163 16.9508C2.83242 16.5992 2.625 16.1223 2.625 15.625L2.625 6.25ZM4.59375 2.5L16.4062 2.5C17.4956 2.5 18.375 3.3375 18.375 4.375L18.375 5L2.625 5L2.625 4.375C2.625 3.3375 3.50438 2.5 4.59375 2.5Z"
+                                        fill="black" />
+                                </svg> 2021/2022 </p>
+                            <p class="info-KM-car"> <svg width="24" height="19" viewBox="0 0 24 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 11.631C24 14.1839 23.1621 16.6072 21.577 18.6394C21.2642 19.0405 20.6761 19.1182 20.2637 18.8158C19.8508 18.5129 19.7693 17.9428 20.0815 17.5424C21.4184 15.8288 22.125 13.7846 22.125 11.631C22.125 6.20454 17.593 1.81818 12 1.81818C6.4032 1.81818 1.875 6.20791 1.875 11.631C1.875 13.7846 2.5816 15.8288 3.91827 17.5424C4.23065 17.9428 4.14917 18.5129 3.73627 18.8158C3.32318 19.1188 2.73541 19.0397 2.42285 18.6394C0.837891 16.6072 -1.06891e-09 14.1839 -8.76524e-10 11.631C-3.91817e-10 5.19921 5.37085 4.04752e-10 12 9.04331e-10C18.6328 1.40419e-09 24 5.20276 24 11.631ZM17.9401 6.15606C18.3062 6.511 18.3062 7.08664 17.9401 7.44157L14.8843 10.4048C15.1359 10.8546 15.2791 11.3695 15.2791 11.916C15.2791 13.6694 13.808 15.0957 12 15.0957C10.1918 15.0957 8.72095 13.6694 8.72095 11.916C8.72095 10.1628 10.1918 8.73632 12 8.73632C12.5638 8.73632 13.0946 8.87517 13.5584 9.11913L16.6143 6.15589C16.9805 5.80095 17.5739 5.80095 17.9401 6.15606ZM13.4041 11.9162C13.4041 11.1655 12.7742 10.5547 12 10.5547C11.2258 10.5547 10.5959 11.1655 10.5959 11.9162C10.5959 12.6669 11.2258 13.2777 12 13.2777C12.7742 13.2777 13.4041 12.6669 13.4041 11.9162Z"
+                                        fill="black" />
+                                </svg> 12.865 Km </p>
+                        </div>
+                        <div class="prices">
+                            <div class="container-price">
+                                <div class="desc-price">Preço a partir de</div>
+                                <h2 class="price">R$ 485.118,00</h2>
+                                <div class="rate-info">Taxas incluídas</div>
+                            </div>
+                            <a href="#"><button class="info-type-button">Conferir</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CarInfo">
+                    <h3 class="title">Audi Q3</h3>
+                    <div class="info-Car">
+                        <p class="desc-info-car">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.6667 8.33335C16.6667 12.4942 12.0508 16.8275 10.5008 18.1659C10.3564 18.2744 10.1807 18.3331 10 18.3331C9.81934 18.3331 9.64357 18.2744 9.49918 18.1659C7.94918 16.8275 3.33334 12.4942 3.33334 8.33335C3.33334 6.56524 4.03572 4.86955 5.28596 3.61931C6.53621 2.36907 8.2319 1.66669 10 1.66669C11.7681 1.66669 13.4638 2.36907 14.7141 3.61931C15.9643 4.86955 16.6667 6.56524 16.6667 8.33335Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10 10.8333C11.3807 10.8333 12.5 9.71402 12.5 8.33331C12.5 6.9526 11.3807 5.83331 10 5.83331C8.61929 5.83331 7.5 6.9526 7.5 8.33331C7.5 9.71402 8.61929 10.8333 10 10.8333Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>Em São Paulo
+                        </p>
+                        <a href=""><img class="coracaoCatalog" src="../Img/coracaoDrivePoint.svg"
+                                alt="coracaoDrivePoint"></a>
+                    </div>
+                    <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250402/audi-q5-2-0-45-tfsi-gasolina-sline-quattro-s-tronic-wmimagem22004714121.webp?s=fill&w=1920&h=1440&q=75"
+                        alt="Q5catalog">
+                    <div class="info-car-bottom">
+                        <div class="info-title">Audi Q5</div>
+                        <p class="info-specs-car">2.0 TFSI Sportback Performance Quattro S-Tronic</p>
+                        <div class="number-info-car">
+                            <p class="info-date-car"> <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.5625 11.25C6.9106 11.25 7.24444 11.1183 7.49058 10.8839C7.73672 10.6495 7.875 10.3315 7.875 10C7.875 9.66848 7.73672 9.35054 7.49058 9.11612C7.24444 8.8817 6.9106 8.75 6.5625 8.75C6.2144 8.75 5.88056 8.8817 5.63442 9.11612C5.38828 9.35054 5.25 9.66848 5.25 10C5.25 10.3315 5.38828 10.6495 5.63442 10.8839C5.88056 11.1183 6.2144 11.25 6.5625 11.25ZM7.875 13.75C7.875 14.0815 7.73672 14.3995 7.49058 14.6339C7.24444 14.8683 6.9106 15 6.5625 15C6.2144 15 5.88056 14.8683 5.63442 14.6339C5.38828 14.3995 5.25 14.0815 5.25 13.75C5.25 13.4185 5.38828 13.1005 5.63442 12.8661C5.88056 12.6317 6.2144 12.5 6.5625 12.5C6.9106 12.5 7.24444 12.6317 7.49058 12.8661C7.73672 13.1005 7.875 13.4185 7.875 13.75ZM10.5 11.25C10.8481 11.25 11.1819 11.1183 11.4281 10.8839C11.6742 10.6495 11.8125 10.3315 11.8125 10C11.8125 9.66848 11.6742 9.35054 11.4281 9.11612C11.1819 8.8817 10.8481 8.75 10.5 8.75C10.1519 8.75 9.81806 8.8817 9.57192 9.11612C9.32578 9.35054 9.1875 9.66848 9.1875 10C9.1875 10.3315 9.32578 10.6495 9.57192 10.8839C9.81806 11.1183 10.1519 11.25 10.5 11.25ZM11.8125 13.75C11.8125 14.0815 11.6742 14.3995 11.4281 14.6339C11.1819 14.8683 10.8481 15 10.5 15C10.1519 15 9.81806 14.8683 9.57192 14.6339C9.32578 14.3995 9.1875 14.0815 9.1875 13.75C9.1875 13.4185 9.32578 13.1005 9.57192 12.8661C9.81806 12.6317 10.1519 12.5 10.5 12.5C10.8481 12.5 11.1819 12.6317 11.4281 12.8661C11.6742 13.1005 11.8125 13.4185 11.8125 13.75ZM14.4375 11.25C14.7856 11.25 15.1194 11.1183 15.3656 10.8839C15.6117 10.6495 15.75 10.3315 15.75 10C15.75 9.66848 15.6117 9.35054 15.3656 9.11612C15.1194 8.8817 14.7856 8.75 14.4375 8.75C14.0894 8.75 13.7556 8.8817 13.5094 9.11612C13.2633 9.35054 13.125 9.66848 13.125 10C13.125 10.3315 13.2633 10.6495 13.5094 10.8839C13.7556 11.1183 14.0894 11.25 14.4375 11.25Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.6875 4.375C19.6875 3.5462 19.3418 2.75134 18.7264 2.16529C18.1111 1.57924 17.2765 1.25 16.4062 1.25L4.59375 1.25C3.72351 1.25 2.88891 1.57924 2.27356 2.16529C1.6582 2.75134 1.3125 3.5462 1.3125 4.375L1.3125 15.625C1.3125 16.4538 1.6582 17.2487 2.27356 17.8347C2.88891 18.4208 3.72351 18.75 4.59375 18.75L16.4062 18.75C17.2765 18.75 18.1111 18.4208 18.7264 17.8347C19.3418 17.2487 19.6875 16.4538 19.6875 15.625L19.6875 4.375ZM2.625 6.25L18.375 6.25L18.375 15.625C18.375 16.6625 17.4956 17.5 16.4062 17.5L4.59375 17.5C4.07161 17.5 3.57085 17.3025 3.20163 16.9508C2.83242 16.5992 2.625 16.1223 2.625 15.625L2.625 6.25ZM4.59375 2.5L16.4062 2.5C17.4956 2.5 18.375 3.3375 18.375 4.375L18.375 5L2.625 5L2.625 4.375C2.625 3.3375 3.50438 2.5 4.59375 2.5Z"
+                                        fill="black" />
+                                </svg> 2021/2022 </p>
+                            <p class="info-KM-car"> <svg width="24" height="19" viewBox="0 0 24 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 11.631C24 14.1839 23.1621 16.6072 21.577 18.6394C21.2642 19.0405 20.6761 19.1182 20.2637 18.8158C19.8508 18.5129 19.7693 17.9428 20.0815 17.5424C21.4184 15.8288 22.125 13.7846 22.125 11.631C22.125 6.20454 17.593 1.81818 12 1.81818C6.4032 1.81818 1.875 6.20791 1.875 11.631C1.875 13.7846 2.5816 15.8288 3.91827 17.5424C4.23065 17.9428 4.14917 18.5129 3.73627 18.8158C3.32318 19.1188 2.73541 19.0397 2.42285 18.6394C0.837891 16.6072 -1.06891e-09 14.1839 -8.76524e-10 11.631C-3.91817e-10 5.19921 5.37085 4.04752e-10 12 9.04331e-10C18.6328 1.40419e-09 24 5.20276 24 11.631ZM17.9401 6.15606C18.3062 6.511 18.3062 7.08664 17.9401 7.44157L14.8843 10.4048C15.1359 10.8546 15.2791 11.3695 15.2791 11.916C15.2791 13.6694 13.808 15.0957 12 15.0957C10.1918 15.0957 8.72095 13.6694 8.72095 11.916C8.72095 10.1628 10.1918 8.73632 12 8.73632C12.5638 8.73632 13.0946 8.87517 13.5584 9.11913L16.6143 6.15589C16.9805 5.80095 17.5739 5.80095 17.9401 6.15606ZM13.4041 11.9162C13.4041 11.1655 12.7742 10.5547 12 10.5547C11.2258 10.5547 10.5959 11.1655 10.5959 11.9162C10.5959 12.6669 11.2258 13.2777 12 13.2777C12.7742 13.2777 13.4041 12.6669 13.4041 11.9162Z"
+                                        fill="black" />
+                                </svg> 12.865 Km </p>
+                        </div>
+                        <div class="prices">
+                            <div class="container-price">
+                                <div class="desc-price">Preço a partir de</div>
+                                <h2 class="price">R$ 485.118,00</h2>
+                                <div class="rate-info">Taxas incluídas</div>
+                            </div>
+                            <a href="#"><button class="info-type-button">Conferir</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CarInfo">
+                    <h3 class="title">Audi Q3</h3>
+                    <div class="info-Car">
+                        <p class="desc-info-car">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.6667 8.33335C16.6667 12.4942 12.0508 16.8275 10.5008 18.1659C10.3564 18.2744 10.1807 18.3331 10 18.3331C9.81934 18.3331 9.64357 18.2744 9.49918 18.1659C7.94918 16.8275 3.33334 12.4942 3.33334 8.33335C3.33334 6.56524 4.03572 4.86955 5.28596 3.61931C6.53621 2.36907 8.2319 1.66669 10 1.66669C11.7681 1.66669 13.4638 2.36907 14.7141 3.61931C15.9643 4.86955 16.6667 6.56524 16.6667 8.33335Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10 10.8333C11.3807 10.8333 12.5 9.71402 12.5 8.33331C12.5 6.9526 11.3807 5.83331 10 5.83331C8.61929 5.83331 7.5 6.9526 7.5 8.33331C7.5 9.71402 8.61929 10.8333 10 10.8333Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>Em São Paulo
+                        </p>
+                        <a href=""><img class="coracaoCatalog" src="../Img/coracaoDrivePoint.svg"
+                                alt="coracaoDrivePoint"></a>
+                    </div>
+                    <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250402/audi-q5-2-0-45-tfsi-gasolina-sline-quattro-s-tronic-wmimagem22004714121.webp?s=fill&w=1920&h=1440&q=75"
+                        alt="Q5catalog">
+                    <div class="info-car-bottom">
+                        <div class="info-title">Audi Q5</div>
+                        <p class="info-specs-car">2.0 TFSI Sportback Performance Quattro S-Tronic</p>
+                        <div class="number-info-car">
+                            <p class="info-date-car"> <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.5625 11.25C6.9106 11.25 7.24444 11.1183 7.49058 10.8839C7.73672 10.6495 7.875 10.3315 7.875 10C7.875 9.66848 7.73672 9.35054 7.49058 9.11612C7.24444 8.8817 6.9106 8.75 6.5625 8.75C6.2144 8.75 5.88056 8.8817 5.63442 9.11612C5.38828 9.35054 5.25 9.66848 5.25 10C5.25 10.3315 5.38828 10.6495 5.63442 10.8839C5.88056 11.1183 6.2144 11.25 6.5625 11.25ZM7.875 13.75C7.875 14.0815 7.73672 14.3995 7.49058 14.6339C7.24444 14.8683 6.9106 15 6.5625 15C6.2144 15 5.88056 14.8683 5.63442 14.6339C5.38828 14.3995 5.25 14.0815 5.25 13.75C5.25 13.4185 5.38828 13.1005 5.63442 12.8661C5.88056 12.6317 6.2144 12.5 6.5625 12.5C6.9106 12.5 7.24444 12.6317 7.49058 12.8661C7.73672 13.1005 7.875 13.4185 7.875 13.75ZM10.5 11.25C10.8481 11.25 11.1819 11.1183 11.4281 10.8839C11.6742 10.6495 11.8125 10.3315 11.8125 10C11.8125 9.66848 11.6742 9.35054 11.4281 9.11612C11.1819 8.8817 10.8481 8.75 10.5 8.75C10.1519 8.75 9.81806 8.8817 9.57192 9.11612C9.32578 9.35054 9.1875 9.66848 9.1875 10C9.1875 10.3315 9.32578 10.6495 9.57192 10.8839C9.81806 11.1183 10.1519 11.25 10.5 11.25ZM11.8125 13.75C11.8125 14.0815 11.6742 14.3995 11.4281 14.6339C11.1819 14.8683 10.8481 15 10.5 15C10.1519 15 9.81806 14.8683 9.57192 14.6339C9.32578 14.3995 9.1875 14.0815 9.1875 13.75C9.1875 13.4185 9.32578 13.1005 9.57192 12.8661C9.81806 12.6317 10.1519 12.5 10.5 12.5C10.8481 12.5 11.1819 12.6317 11.4281 12.8661C11.6742 13.1005 11.8125 13.4185 11.8125 13.75ZM14.4375 11.25C14.7856 11.25 15.1194 11.1183 15.3656 10.8839C15.6117 10.6495 15.75 10.3315 15.75 10C15.75 9.66848 15.6117 9.35054 15.3656 9.11612C15.1194 8.8817 14.7856 8.75 14.4375 8.75C14.0894 8.75 13.7556 8.8817 13.5094 9.11612C13.2633 9.35054 13.125 9.66848 13.125 10C13.125 10.3315 13.2633 10.6495 13.5094 10.8839C13.7556 11.1183 14.0894 11.25 14.4375 11.25Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.6875 4.375C19.6875 3.5462 19.3418 2.75134 18.7264 2.16529C18.1111 1.57924 17.2765 1.25 16.4062 1.25L4.59375 1.25C3.72351 1.25 2.88891 1.57924 2.27356 2.16529C1.6582 2.75134 1.3125 3.5462 1.3125 4.375L1.3125 15.625C1.3125 16.4538 1.6582 17.2487 2.27356 17.8347C2.88891 18.4208 3.72351 18.75 4.59375 18.75L16.4062 18.75C17.2765 18.75 18.1111 18.4208 18.7264 17.8347C19.3418 17.2487 19.6875 16.4538 19.6875 15.625L19.6875 4.375ZM2.625 6.25L18.375 6.25L18.375 15.625C18.375 16.6625 17.4956 17.5 16.4062 17.5L4.59375 17.5C4.07161 17.5 3.57085 17.3025 3.20163 16.9508C2.83242 16.5992 2.625 16.1223 2.625 15.625L2.625 6.25ZM4.59375 2.5L16.4062 2.5C17.4956 2.5 18.375 3.3375 18.375 4.375L18.375 5L2.625 5L2.625 4.375C2.625 3.3375 3.50438 2.5 4.59375 2.5Z"
+                                        fill="black" />
+                                </svg> 2021/2022 </p>
+                            <p class="info-KM-car"> <svg width="24" height="19" viewBox="0 0 24 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 11.631C24 14.1839 23.1621 16.6072 21.577 18.6394C21.2642 19.0405 20.6761 19.1182 20.2637 18.8158C19.8508 18.5129 19.7693 17.9428 20.0815 17.5424C21.4184 15.8288 22.125 13.7846 22.125 11.631C22.125 6.20454 17.593 1.81818 12 1.81818C6.4032 1.81818 1.875 6.20791 1.875 11.631C1.875 13.7846 2.5816 15.8288 3.91827 17.5424C4.23065 17.9428 4.14917 18.5129 3.73627 18.8158C3.32318 19.1188 2.73541 19.0397 2.42285 18.6394C0.837891 16.6072 -1.06891e-09 14.1839 -8.76524e-10 11.631C-3.91817e-10 5.19921 5.37085 4.04752e-10 12 9.04331e-10C18.6328 1.40419e-09 24 5.20276 24 11.631ZM17.9401 6.15606C18.3062 6.511 18.3062 7.08664 17.9401 7.44157L14.8843 10.4048C15.1359 10.8546 15.2791 11.3695 15.2791 11.916C15.2791 13.6694 13.808 15.0957 12 15.0957C10.1918 15.0957 8.72095 13.6694 8.72095 11.916C8.72095 10.1628 10.1918 8.73632 12 8.73632C12.5638 8.73632 13.0946 8.87517 13.5584 9.11913L16.6143 6.15589C16.9805 5.80095 17.5739 5.80095 17.9401 6.15606ZM13.4041 11.9162C13.4041 11.1655 12.7742 10.5547 12 10.5547C11.2258 10.5547 10.5959 11.1655 10.5959 11.9162C10.5959 12.6669 11.2258 13.2777 12 13.2777C12.7742 13.2777 13.4041 12.6669 13.4041 11.9162Z"
+                                        fill="black" />
+                                </svg> 12.865 Km </p>
+                        </div>
+                        <div class="prices">
+                            <div class="container-price">
+                                <div class="desc-price">Preço a partir de</div>
+                                <h2 class="price">R$ 485.118,00</h2>
+                                <div class="rate-info">Taxas incluídas</div>
+                            </div>
+                            <a href="#"><button class="info-type-button">Conferir</button></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="CarInfo">
+                    <h3 class="title">Audi Q3</h3>
+                    <div class="info-Car">
+                        <p class="desc-info-car">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.6667 8.33335C16.6667 12.4942 12.0508 16.8275 10.5008 18.1659C10.3564 18.2744 10.1807 18.3331 10 18.3331C9.81934 18.3331 9.64357 18.2744 9.49918 18.1659C7.94918 16.8275 3.33334 12.4942 3.33334 8.33335C3.33334 6.56524 4.03572 4.86955 5.28596 3.61931C6.53621 2.36907 8.2319 1.66669 10 1.66669C11.7681 1.66669 13.4638 2.36907 14.7141 3.61931C15.9643 4.86955 16.6667 6.56524 16.6667 8.33335Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path
+                                    d="M10 10.8333C11.3807 10.8333 12.5 9.71402 12.5 8.33331C12.5 6.9526 11.3807 5.83331 10 5.83331C8.61929 5.83331 7.5 6.9526 7.5 8.33331C7.5 9.71402 8.61929 10.8333 10 10.8333Z"
+                                    stroke="#64748B" stroke-width="1.66667" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>Em São Paulo
+                        </p>
+                        <a href=""><img class="coracaoCatalog" src="../Img/coracaoDrivePoint.svg"
+                                alt="coracaoDrivePoint"></a>
+                    </div>
+                    <img src="https://image.webmotors.com.br/_fotos/anunciousados/gigante/2025/202504/20250402/audi-q5-2-0-45-tfsi-gasolina-sline-quattro-s-tronic-wmimagem22004714121.webp?s=fill&w=1920&h=1440&q=75"
+                        alt="Q5catalog">
+                    <div class="info-car-bottom">
+                        <div class="info-title">Audi Q5</div>
+                        <p class="info-specs-car">2.0 TFSI Sportback Performance Quattro S-Tronic</p>
+                        <div class="number-info-car">
+                            <p class="info-date-car"> <svg width="21" height="20" viewBox="0 0 21 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.5625 11.25C6.9106 11.25 7.24444 11.1183 7.49058 10.8839C7.73672 10.6495 7.875 10.3315 7.875 10C7.875 9.66848 7.73672 9.35054 7.49058 9.11612C7.24444 8.8817 6.9106 8.75 6.5625 8.75C6.2144 8.75 5.88056 8.8817 5.63442 9.11612C5.38828 9.35054 5.25 9.66848 5.25 10C5.25 10.3315 5.38828 10.6495 5.63442 10.8839C5.88056 11.1183 6.2144 11.25 6.5625 11.25ZM7.875 13.75C7.875 14.0815 7.73672 14.3995 7.49058 14.6339C7.24444 14.8683 6.9106 15 6.5625 15C6.2144 15 5.88056 14.8683 5.63442 14.6339C5.38828 14.3995 5.25 14.0815 5.25 13.75C5.25 13.4185 5.38828 13.1005 5.63442 12.8661C5.88056 12.6317 6.2144 12.5 6.5625 12.5C6.9106 12.5 7.24444 12.6317 7.49058 12.8661C7.73672 13.1005 7.875 13.4185 7.875 13.75ZM10.5 11.25C10.8481 11.25 11.1819 11.1183 11.4281 10.8839C11.6742 10.6495 11.8125 10.3315 11.8125 10C11.8125 9.66848 11.6742 9.35054 11.4281 9.11612C11.1819 8.8817 10.8481 8.75 10.5 8.75C10.1519 8.75 9.81806 8.8817 9.57192 9.11612C9.32578 9.35054 9.1875 9.66848 9.1875 10C9.1875 10.3315 9.32578 10.6495 9.57192 10.8839C9.81806 11.1183 10.1519 11.25 10.5 11.25ZM11.8125 13.75C11.8125 14.0815 11.6742 14.3995 11.4281 14.6339C11.1819 14.8683 10.8481 15 10.5 15C10.1519 15 9.81806 14.8683 9.57192 14.6339C9.32578 14.3995 9.1875 14.0815 9.1875 13.75C9.1875 13.4185 9.32578 13.1005 9.57192 12.8661C9.81806 12.6317 10.1519 12.5 10.5 12.5C10.8481 12.5 11.1819 12.6317 11.4281 12.8661C11.6742 13.1005 11.8125 13.4185 11.8125 13.75ZM14.4375 11.25C14.7856 11.25 15.1194 11.1183 15.3656 10.8839C15.6117 10.6495 15.75 10.3315 15.75 10C15.75 9.66848 15.6117 9.35054 15.3656 9.11612C15.1194 8.8817 14.7856 8.75 14.4375 8.75C14.0894 8.75 13.7556 8.8817 13.5094 9.11612C13.2633 9.35054 13.125 9.66848 13.125 10C13.125 10.3315 13.2633 10.6495 13.5094 10.8839C13.7556 11.1183 14.0894 11.25 14.4375 11.25Z"
+                                        fill="black" />
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M19.6875 4.375C19.6875 3.5462 19.3418 2.75134 18.7264 2.16529C18.1111 1.57924 17.2765 1.25 16.4062 1.25L4.59375 1.25C3.72351 1.25 2.88891 1.57924 2.27356 2.16529C1.6582 2.75134 1.3125 3.5462 1.3125 4.375L1.3125 15.625C1.3125 16.4538 1.6582 17.2487 2.27356 17.8347C2.88891 18.4208 3.72351 18.75 4.59375 18.75L16.4062 18.75C17.2765 18.75 18.1111 18.4208 18.7264 17.8347C19.3418 17.2487 19.6875 16.4538 19.6875 15.625L19.6875 4.375ZM2.625 6.25L18.375 6.25L18.375 15.625C18.375 16.6625 17.4956 17.5 16.4062 17.5L4.59375 17.5C4.07161 17.5 3.57085 17.3025 3.20163 16.9508C2.83242 16.5992 2.625 16.1223 2.625 15.625L2.625 6.25ZM4.59375 2.5L16.4062 2.5C17.4956 2.5 18.375 3.3375 18.375 4.375L18.375 5L2.625 5L2.625 4.375C2.625 3.3375 3.50438 2.5 4.59375 2.5Z"
+                                        fill="black" />
+                                </svg> 2021/2022 </p>
+                            <p class="info-KM-car"> <svg width="24" height="19" viewBox="0 0 24 19" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 11.631C24 14.1839 23.1621 16.6072 21.577 18.6394C21.2642 19.0405 20.6761 19.1182 20.2637 18.8158C19.8508 18.5129 19.7693 17.9428 20.0815 17.5424C21.4184 15.8288 22.125 13.7846 22.125 11.631C22.125 6.20454 17.593 1.81818 12 1.81818C6.4032 1.81818 1.875 6.20791 1.875 11.631C1.875 13.7846 2.5816 15.8288 3.91827 17.5424C4.23065 17.9428 4.14917 18.5129 3.73627 18.8158C3.32318 19.1188 2.73541 19.0397 2.42285 18.6394C0.837891 16.6072 -1.06891e-09 14.1839 -8.76524e-10 11.631C-3.91817e-10 5.19921 5.37085 4.04752e-10 12 9.04331e-10C18.6328 1.40419e-09 24 5.20276 24 11.631ZM17.9401 6.15606C18.3062 6.511 18.3062 7.08664 17.9401 7.44157L14.8843 10.4048C15.1359 10.8546 15.2791 11.3695 15.2791 11.916C15.2791 13.6694 13.808 15.0957 12 15.0957C10.1918 15.0957 8.72095 13.6694 8.72095 11.916C8.72095 10.1628 10.1918 8.73632 12 8.73632C12.5638 8.73632 13.0946 8.87517 13.5584 9.11913L16.6143 6.15589C16.9805 5.80095 17.5739 5.80095 17.9401 6.15606ZM13.4041 11.9162C13.4041 11.1655 12.7742 10.5547 12 10.5547C11.2258 10.5547 10.5959 11.1655 10.5959 11.9162C10.5959 12.6669 11.2258 13.2777 12 13.2777C12.7742 13.2777 13.4041 12.6669 13.4041 11.9162Z"
+                                        fill="black" />
+                                </svg> 12.865 Km </p>
+                        </div>
+                        <div class="prices">
+                            <div class="container-price">
+                                <div class="desc-price">Preço a partir de</div>
+                                <h2 class="price">R$ 485.118,00</h2>
+                                <div class="rate-info">Taxas incluídas</div>
+                            </div>
+                            <a href="#"><button class="info-type-button">Conferir</button></a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <button class="butao" onclick="logout()">logout</button>
+
+    <!-- agrupar os carros de 3 em 3 -->
+
+    <!-- <div class="footer-home-div">
+        <footer class="footer-home">
+            <div class="footer-content-home">
+                <p>&copy; 2025 DrivePoint. Todos os direitos reservados.</p>
+                <nav class="rodape-home">
+                    <ul>
+                        <li><a href="#">Política de Privacidade</a></li>
+                        <li><a href="#">Termos de Serviço</a></li>
+                        <li><a href="#">Contato</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </footer>
+    </div> -->
+</body>
+
+</html>
