@@ -114,15 +114,14 @@ nav ul .submenu-home li a {
     height: 100%;
     position: absolute;
 
-    background-image: url('./Img/volkswagenTera.svg');
+    background-image: url('https://api.grupojcf.com.br/storage/images/7fb56e6fab110a7231843b4ef536846d6eec945b.png');
     background-position: center;
-    background-size: 740px auto;
+    background-size: 680px auto;
     background-repeat: no-repeat;
     background-position: 70% 26vh;
     z-index: -1;
     opacity: 85%;
-    filter: blur(3.5px);
-
+    filter: blur(6px);
 }
 
 /* leftsubcont-home-realese */
@@ -276,24 +275,6 @@ input[type=date] {
     margin-top: 20px;
 }
 
-
-
-/* blur pra teste */
-
-/* .second-container-favorito img {
-    position: relative;
-    z-index: 0;
-    filter: blur(4px);
-}
-
-.second-container-favorito img:hover {
-    filter: blur(0px);
-    z-index: 1;
-} */
-
-/* fim blur pra teste */
-
-
 /* third-container */
 
 .third-container {
@@ -322,42 +303,23 @@ input[type=date] {
     gap: 3em;
 }
 
-.groupLabel label {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-    margin: 0 5px;
-    transition: background-color 0.3s;
-}
-
-/* motion blur teste */
-
 .img-newsletter {
     border-radius: 26px;
     height: 100%;
     width: 60%;
     padding: 1em;
-    z-index: 0;
-    position: relative;
-    font-size: 1.1em;
+    font-size: 0.8em;
 
     background-image: url("https://s2-g1.glbimg.com/0pWPD1Y3gbSxTXccoILu-zODEfc=/336x262:3295x2082/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_59edd422c0c84a879bd37670ae4f538a/internal_photos/bs/2025/J/b/a41Qk9TkyxIhGTWLEByw/whatsapp-image-2025-03-02-at-12.52.28.jpeg");
     background-repeat: no-repeat;
     background-size: 119% auto;
     background-position: 70% 0;
 
-    filter: blur(3px);
+    display: flex;
+    align-items: end;
+
+
 }
-
-.img-newsletter:hover {
-    filter: blur(0px);
-    transition: filter 0.3s ease;
-}
-
-
-/* motion blur teste */
 
 .img-newsletter a>h1 {
     color: white;
@@ -627,45 +589,92 @@ input[type=date] {
 /* Rodapé */
 
 .footer-home-div {
-    display: flex;
-    justify-content: center;
-    height: 18vh;
+    background-color: #260064;
+    color: #040020;
     width: 100%;
-    background-color: #444444;
-    color: white;
-    padding: 20px;
-    margin: 0;
+    flex-direction: column;
 }
 
-.footer-content-home {
-    text-align: center;
-    font-family: 'Roboto', sans-serif;
+
+.footer-info {
+    background-color: #91ff00;
+    margin: 3em;
 }
 
-.footer-home p {
-    margin: 0;
-    font-size: 14px;
-    margin-bottom: 25px;
-    font-family: 'Roboto', sans-serif;
-
-}
-
-.rodape-home ul {
-    list-style: none;
-    padding: 0;
+.contact-footer {
+    background-color: violet;
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
-    /* gap: 20px; */
-    margin-top: 10px;
+}
+
+.adress-footer span {
+    background-color: orange;
+    width: 2.5em;
+    height: 2.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 60%;
+}
+
+.contact-footer > img {
+    width: 14em;
+    height: 4em;
+}
+
+.adress-footer{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
 }
 
 
-.rodape-home ul li a {
-    text-decoration: none;
-    color: white;
-    font-size: 14px;
+
+
+.container-nav-footer {
+    background-color: #ccc;
+    display: flex;
+    flex-direction: row;
 }
 
-.rodape-home ul li a:hover {
-    color: #28a745;
+
+
+
+.socialmedia {
+    background-color: #7235d4;
+    width: 28%;
+    font-size: 1.43em;
+}
+
+.socialmedia > p {
+    background-color: #c8ff7f;
+    margin-top: 2.4em;
+    margin-bottom: 1.3em;
+}
+
+.nav-footer-info{
+    background-color: #91ff00;
+    display: flex;
+}
+
+.navfooter-info{
+    background-color: #ff004c;
+    display: flex;
+}
+
+.links-nav-container{
+    background-color: red;  
+    display: flex;
+    flex-direction: column;
+}
+
+.links-nav-container > h2{
+    margin-left: 1em;
+}
+
+.links-nav-container > ul {
+    background-color: whitesmoke;
+    display: flex;
+    flex-direction: column;
 }
